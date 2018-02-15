@@ -7,7 +7,7 @@ window.onload = function() {
     // 'phaser-example' to 'game', which is the id of the HTML element where we
     // want the game to go.
     // The assets (and code) can be found at: https://github.com/photonstorm/phaser/tree/master/examples/assets
-    // You will need to change the paths you pass to "game.load.image()" or any other
+    // You will need to change` the paths you pass to "game.load.image()" or any other
     // loading functions to reflect where you are putting the assets.
     // All loading functions will typically all be found inside "preload()".
     
@@ -35,11 +35,11 @@ window.onload = function() {
 
     }
     
-    var map;
-    var layer1;
-    var chick;
+     var map;
+     var layer1;
+     var chick;
      var chick1;
-    var chick2;
+     var chick2;
      var chick3;
      var clist
      var c;
@@ -69,29 +69,28 @@ window.onload = function() {
         clist = [];
         // Create a sprite at the center of the screen using the 'logo' image.
         chick = game.add.sprite( game.world.centerX, game.world.centerY, 'chick' );
-    //    chicks(chick1)
+            //    chicks(chick1)
 
-  //       clist.push(new chicks(chick2))
-  //       //chicks(chick3)
-  //       clist.push(new chicks(chick3))
-  //       clist.push(new chicks(chick1))
- 
+          //       clist.push(new chicks(chick2))
+          //       //chicks(chick3)
+          //       clist.push(new chicks(chick3))
+          //       clist.push(new chicks(chick1))
+         
 
-  // for(let i = 0 ; i < 3 ; i++){
-  //       game.physics.arcade.enable(clist[i]);
-  // }
+          // for(let i = 0 ; i < 3 ; i++){
+          //       game.physics.arcade.enable(clist[i]);
+          // }
 
-
-    text = game.add.text(game.world.centerX-300 , game.world.centerY-200, "Collect your chicks \nas fast as you can!\n \n \n Click to start! ", {
-        font: "60px Arial",
-        fill: "#F7FF00",
-        align: "center",
-        fontStyle: "bold",
-        stroke: "black",
-        strokeThickness: 1
-    });
-      text.stroke = '#000000';
-    text.strokeThickness = 8;
+        text = game.add.text(game.world.centerX-300 , game.world.centerY-200, "Collect your chicks \nas fast as you can!\n \n \n Click to start! ", {
+            font: "60px Arial",
+            fill: "#F7FF00",
+            align: "center",
+            fontStyle: "bold",
+            stroke: "black",
+            strokeThickness: 1
+        });
+          text.stroke = '#000000';
+          text.strokeThickness = 8;
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         chick.anchor.setTo( 0.5, 0.5 );
@@ -100,18 +99,18 @@ window.onload = function() {
         game.physics.enable( chick, Phaser.Physics.ARCADE );
             c = game.add.group();
                 c.enableBody = true;
-    c.physicsBodyType = Phaser.Physics.ARCADE;
-chicks(c)
-chicks(c)
-chicks(c)
-      
+        c.physicsBodyType = Phaser.Physics.ARCADE;
+        chicks(c)
+        chicks(c)
+        chicks(c)
+              
         // Make it bounce off of the world bounds.
         chick.body.collideWorldBounds = true;
         
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         
-    game.input.onDown.add(startGame, this);
+        game.input.onDown.add(startGame, this);
 
         
         game.camera.follow(chick);
@@ -167,9 +166,9 @@ chicks(c)
                  chick.x = game.world.centerX
                  chick.y= game.world.centerY
         }
-        chick.rotation = game.physics.arcade.accelerateToPointer( chick, this.game.input.activePointer, 1000, 800, 800 );
+        chick.rotation = game.physics.arcade.accelerateToPointer( chick, this.game.input.activePointer, 1300, 1000, 1000 );
 
-    game.physics.arcade.collide(chick, c, found, null, this)
+        game.physics.arcade.collide(chick, c, found, null, this)
 
     }
 }
