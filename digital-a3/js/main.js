@@ -1,5 +1,5 @@
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update });
 
 function preload() {
 
@@ -91,7 +91,7 @@ var text2
 function lose() {
     game.physics.arcade.isPaused  = true;
     timer = game.time.create(false);
-      text2 = game.add.text(game.world.centerX-300 , game.world.centerY-200, "Game Over, Star is destroyed, Try again! \n ",{
+      text2 = game.add.text(game.world.centerX-300 , game.world.centerY-200, "Game Over, Star is destroyed, Try again!\n Restarting \n ",{
             font: "30px Arial",
             fill: "#F7FF00",
             align: "center",
