@@ -26,8 +26,14 @@ GameStates.makePreloader = function( game ) {
             game.load.image('titlePage', 'assets/title.jpg');
             game.load.atlas('playButton', 'assets/play_button.png', 'assets/play_button.json');
             game.load.audio('titleMusic', ['assets/Poppers and Prosecco.mp3']);
-            //	+ lots of other required assets here
-            game.load.image( 'logo', 'assets/phaser.png' );
+              game.load.image('bg', 'assets/bg.png'); //http://theartsyfartsyartroom.blogspot.com/2015/07/alternative-color-wheels.html
+
+
+    game.load.image('analog', 'assets/fusia.png');
+    game.load.image('arrow', 'assets/arrow.png');
+    game.load.image('cup', 'assets/cup3.png');    
+        game.load.image('cup2', 'assets/cup3.png');    
+        game.load.image('cup1', 'assets/cup3.png');    
         },
     
         create: function () {
