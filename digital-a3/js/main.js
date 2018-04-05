@@ -65,7 +65,7 @@ music.play()
     player.enableBody = true;
     player.body.allowGravity = false;
     player.body.immovable = true;
-
+checkCollision = false;
  
     dir = game.input.keyboard.createCursorKeys();
        welcome = game.add.text(game.world.centerX-350 , game.world.centerY-200, "Try in save the star by getting it in the black portal on the center of screeen \nYou automatically move up once you collect a yellow stars\n Move right and left using arrows \npress space to begin \n Good Luck! ",{
@@ -81,8 +81,7 @@ music.play()
 
    var clicked = -1;
 
-    game.time.events.repeat(Phaser.Timer.SECOND *1.85, 100, launch, this);
-     game.time.events.repeat(Phaser.Timer.SECOND *2.1, 100, launch2, this);
+
    game.time.events.repeat(Phaser.Timer.SECOND *5.55, 100, powerup, this);
 
 }
