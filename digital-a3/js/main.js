@@ -40,7 +40,6 @@ function create() {
    sky.height = 600;
    sky.alpha = 0.7;
 
-
     game.physics.arcade.gravity.y = 400;
     portal = game.add.image(game.world.centerX, game.world.centerY, 'portal');
      portal.anchor.setTo(0.5)
@@ -69,7 +68,7 @@ checkCollision = false;
  
     dir = game.input.keyboard.createCursorKeys();
        welcome = game.add.text(game.world.centerX-350 , game.world.centerY-200, "Try in save the star by getting it in the black portal on the center of screeen \nYou automatically move up once you collect a yellow stars\n Move right and left using arrows \npress space to begin \n Good Luck! ",{
-            font: "20px Arial",
+            font: "15px Arial",
             fill: "#F7FF00",
             align: "center",
             fontStyle: "bold",
@@ -144,6 +143,7 @@ function powerup() {
      
      game.physics.enable(power, Phaser.Physics.ARCADE);
      power.body.gravity.y = 10;
+
 }
 
 
