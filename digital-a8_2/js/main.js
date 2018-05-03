@@ -74,7 +74,7 @@ music.loop=true;
     dude.height-=10
     dude.immovable= true;
 
-  gun = game.add.sprite(750, 550, 'gsp');
+  gun = game.add.sprite(770, 560, 'gsp');
      game.physics.enable(gun, Phaser.Physics.ARCADE);
      gun.anchor.setTo(0.5, 0.5);
     gun.angle +=20
@@ -89,8 +89,8 @@ music.loop=true;
     // bricks2.create(150,50, 'bricks');
     player = game.add.sprite(game.world.randomX, 0, 'aim');
 
-      gun.animations.add('a', [1],true,  true);
-      gun.animations.add('b', [1,0,1],40,false, true);
+      gun.animations.add('a', [0],true,  true);
+      gun.animations.add('b', [0,1,0],40,false, true);
 
 
      game.physics.enable(player, Phaser.Physics.ARCADE);
@@ -193,6 +193,20 @@ game.state.start(game.state.current);
 }
 
 function update() {
+  console.log(gun.rotation )
+
+ let ang=  game.physics.arcade.angleToPointer(gun);
+  if(ang <=-1.5 && ang >=-3) {
+      gun.rotation = game.physics.arcade.angleToPointer(gun);
+
+    }
+    else if (ang >=-1.65 && gun.rotation<1.5){
+      gun.rotation = -1.6
+    }
+    else {
+      gun.rotation = 2.6
+    }
+
   if(bullet.x <0 || bullet.x >800 ) {
     bullet.visible = false;
 
